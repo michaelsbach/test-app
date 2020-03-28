@@ -20,3 +20,10 @@ before_script:
 script:
   # Run tests
   - npm run test
+
+deploy:
+  # Build Docker container and push to Docker Hub
+  provider: script
+  script: bash deploy.sh
+  on:
+    branch: master
